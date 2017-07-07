@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Jun 22 20:47:32 2017
+# Process ID: 18876
+# Current directory: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/synth_1
+# Command line: vivado.exe -log hdmi_out_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_out_wrapper.tcl
+# Log file: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/synth_1/hdmi_out_wrapper.vds
+# Journal file: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_out_wrapper.tcl -notrace

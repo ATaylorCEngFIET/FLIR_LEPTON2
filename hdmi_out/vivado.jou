@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Jul 07 16:36:14 2017
+# Process ID: 3928
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13552
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.xpr
+launch_sdk -workspace C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk -hwspec C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+archive_project C:/hdl_projects/Z7-20/hdmi_out/hdmi_out.xpr.zip -temp_dir C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3928-DESKTOP-HQKVQ13 -force -include_config_settings

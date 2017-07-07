@@ -1,0 +1,236 @@
+/***************************** Include Files **********************************/
+#include "xparameters.h"
+#include "xiicps.h"
+#include "xil_printf.h"
+//#include "xspips.h"
+#include "xspi.h"
+
+
+/************************** Constant Definitions ******************************/
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define IIC_DEVICE_ID		XPAR_XIICPS_0_DEVICE_ID
+
+//#define SPI_DEVICE_ID		XPAR_XSPIPS_0_DEVICE_ID
+#define SPI_DEVICE_ID		XPAR_XQSPIPS_0_DEVICE_ID
+
+/*
+ * The slave address to send to and receive from.
+ */
+#define IIC_SLAVE_ADDR		0x2A
+#define IIC_SCLK_RATE		100000
+
+/*
+ * The following constant controls the length of the buffers to be sent
+ * and received with the IIC.
+ */
+#define TEST_BUFFER_SIZE	16
+
+/**************************** Type Definitions ********************************/
+
+
+/************************** Function Prototypes *******************************/
+
+//int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId, XSpiPs *SpiInstancePtr);
+int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId, XSpi *SpiInstancePtr);
+/************************** Variable Definitions ******************************/
+
+XIicPs Iic;		/**< Instance of the IIC Device */
+//XSpiPs SpiInstance;
+
+ XSpi SpiInstance;
+
+/*
+ * The following buffers are used in this example to send and receive data
+ * with the IIC.
+ */
+u8 SendBuffer[TEST_BUFFER_SIZE];    /**< Buffer for Transmitting Data */
+u8 RecvBuffer[TEST_BUFFER_SIZE];    /**< Buffer for Receiving Data */
+
+
+/******************************************************************************/
+/**
+*
+* Main function to call the polled master example.
+*
+* @param	None.
+*
+* @return	XST_SUCCESS if successful, XST_FAILURE if unsuccessful.
+*
+* @note		None.
+*
+*******************************************************************************/
+int main(void)
+{
+	int Status;
+
+	xil_printf("IIC Master Polled Example Test \r\n");
+
+	/*
+	 * Run the Iic polled example in master mode, specify the Device
+	 * ID that is specified in xparameters.h.
+	 */
+	Status = IicPsMasterPolledExample(IIC_DEVICE_ID, SPI_DEVICE_ID, &SpiInstance );
+	if (Status != XST_SUCCESS) {
+		xil_printf("IIC Master Polled Example Test Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Successfully ran IIC Master Polled Example Test\r\n");
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function sends data and expects to receive data from slave as modular
+* of 64.
+*
+* This function uses interrupt-driven mode of the device.
+*
+* @param	DeviceId is the Device ID of the IicPs Device and is the
+*		XPAR_<IICPS_instance>_DEVICE_ID value from xparameters.h
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None.
+*
+*******************************************************************************/
+//int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId,XSpiPs *SpiInstancePtr)
+int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId,XSpi *SpiInstancePtr)
+{
+	int Status,i;
+	XIicPs_Config *Config;
+	//XSpiPs_Config *SpiConfig;
+	XSpi_Config *SpiConfig;
+	u8 Buffer[32];
+
+	int Index;
+
+	/*
+	 * Initialize the IIC driver so that it's ready to use
+	 * Look up the configuration in the config table,
+	 * then initialize it.
+	 */
+	Config = XIicPs_LookupConfig(DeviceId);
+	if (NULL == Config) {
+		return XST_FAILURE;
+	}
+
+	Status = XIicPs_CfgInitialize(&Iic, Config, Config->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built correctly.
+	 */
+	Status = XIicPs_SelfTest(&Iic);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Set the IIC serial clock rate.
+	 */
+	XIicPs_SetSClk(&Iic, IIC_SCLK_RATE);
+
+	//SpiConfig = XSpiPs_LookupConfig(SpiDeviceId);
+	SpiConfig = XSpi_LookupConfig(SpiDeviceId);
+	if (NULL == SpiConfig) {
+		return XST_FAILURE;
+	}
+
+	//Status = XSpiPs_CfgInitialize(SpiInstancePtr, SpiConfig,SpiConfig->BaseAddress);
+	Status = XSpi_CfgInitialize(SpiInstancePtr, SpiConfig,SpiConfig->BaseAddress);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	//Status = XSpiPs_SelfTest(SpiInstancePtr);
+	Status = XSpi_SelfTest(SpiInstancePtr);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	//XSpiPs_SetOptions(SpiInstancePtr, XSPIPS_MASTER_OPTION | XSPIPS_FORCE_SSELECT_OPTION
+	//		|XSPIPS_CLK_PHASE_1_OPTION |XSPIPS_CLK_ACTIVE_LOW_OPTION );
+
+	XSpi_SetOptions(SpiInstancePtr, XSP_MASTER_OPTION | XSP_CLK_ACTIVE_LOW_OPTION
+				|XSP_CLK_PHASE_1_OPTION |XSP_MANUAL_SSELECT_OPTION );
+
+	//XSpiPs_SetClkPrescaler(SpiInstancePtr, XSPIPS_CLK_PRESCALE_64);
+	//XQspiPs_SetClkPrescaler(SpiInstancePtr, XQSPIPS_CLK_PRESCALE_64);
+
+	XSpi_Start(SpiInstancePtr);
+	XSpi_IntrGlobalDisable(SpiInstancePtr);
+
+
+	/*
+	 * Initialize the send buffer bytes with a pattern to send and the
+	 * the receive buffer bytes to zero to allow the receive data to be
+	 * verified.
+	 */
+
+	for (Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+		SendBuffer[Index] = (Index % TEST_BUFFER_SIZE);
+		RecvBuffer[Index] = 0;
+	}
+
+	/*
+	 * Send the buffer using the IIC and ignore the number of bytes sent
+	 * as the return value since we are using it in interrupt mode.
+	 */
+while(1){
+
+	SendBuffer[0] = 0x00;
+	SendBuffer[1] = 0x02;
+
+	XIicPs_MasterSendPolled(&Iic, SendBuffer,
+				 2, IIC_SLAVE_ADDR);
+	while (XIicPs_BusIsBusy(&Iic)) {
+		/* NOP */
+	}
+	Status = XIicPs_MasterRecvPolled(&Iic, RecvBuffer,
+			 2, IIC_SLAVE_ADDR);
+
+	for(i =0; i<16; i++){
+
+	xil_printf("%X ", RecvBuffer[i]);
+	}
+
+	xil_printf("\n\r ");
+	//if (Status != XST_SUCCESS) {
+	//	return XST_FAILURE;
+	//}
+
+	/*
+	 * Wait until bus is idle to start another transfer.
+	 */
+	while (XIicPs_BusIsBusy(&Iic)) {
+		/* NOP */
+	}
+
+	//SXSpiPs_SetSlaveSelect(SpiInstancePtr, 0x01);
+	XSpi_SetSlaveSelect(SpiInstancePtr,0x01);
+	//XSpiPs_PolledTransfer(SpiInstancePtr, Buffer , Buffer,	0x32);
+	Status = XSpi_Transfer(SpiInstancePtr, Buffer , Buffer,	0x32);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Spi fail\r\n");
+	}
+	for(i =0; i<16; i++){
+
+	xil_printf("%X ", Buffer[i]);
+	}
+	xil_printf("\n\r ");
+	usleep(100000);
+	//XSpiPs_SetSlaveSelect(SpiInstancePtr, 0x00);
+
+}
+
+	return XST_SUCCESS;
+}

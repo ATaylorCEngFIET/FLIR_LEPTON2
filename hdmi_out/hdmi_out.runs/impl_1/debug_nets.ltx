@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<probeData version="2" minor="0">
+  <probeset name="EDA_PROBESET" active="true">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="hdmi_out_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="0"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_out_i/io1_i_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="hdmi_out_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="1"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_out_i/axi_quad_spi_0_sck_o"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="hdmi_out_i/ila_0"/>
+        <Option Id="PROBE_PORT" value="2"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="hdmi_out_i/axi_quad_spi_0_ss_o"/>
+      </nets>
+    </probe>
+  </probeset>
+</probeData>

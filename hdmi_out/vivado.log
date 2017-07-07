@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Jul 07 16:36:14 2017
+# Process ID: 3928
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13552
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Xilinx/Vivado/2016.4/scripts/init.tcl'
+start_gui
+open_project C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory '../repo/board_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/hdl_projects/digilent'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 996.379 ; gain = 323.145
+launch_sdk -workspace C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk -hwspec C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk -hwspec C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+archive_project C:/hdl_projects/Z7-20/hdmi_out/hdmi_out.xpr.zip -temp_dir C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3928-DESKTOP-HQKVQ13 -force -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3928-DESKTOP-HQKVQ13' for archiving project
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory '../repo/board_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/hdl_projects/digilent'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3928-DESKTOP-HQKVQ13/PrjAr/_X_'.
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
