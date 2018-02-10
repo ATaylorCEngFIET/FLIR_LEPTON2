@@ -53,56 +53,56 @@ set rc [catch {
   set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.cache/wt [current_project]
-  set_property parent.project_path C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.xpr [current_project]
-  set_property ip_repo_paths C:/hdl_projects/digilent [current_project]
-  set_property ip_output_repo C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.cache/wt [current_project]
+  set_property parent.project_path C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.xpr [current_project]
+  set_property ip_repo_paths C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.ipdefs/digilent_0 [current_project]
+  set_property ip_output_repo C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/synth_1/hdmi_out_wrapper.dcp
-  read_xdc -prop_thru_buffers -ref hdmi_out_axi_gpio_hdmi_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc]
-  read_xdc -ref hdmi_out_axi_gpio_hdmi_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc]
-  read_xdc -ref hdmi_out_axi_vdma_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref hdmi_out_proc_sys_reset_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc]
-  read_xdc -ref hdmi_out_proc_sys_reset_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref hdmi_out_proc_sys_reset_1_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc]
-  read_xdc -ref hdmi_out_proc_sys_reset_1_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc]
-  read_xdc -ref hdmi_out_processing_system7_0_0 -cells inst c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc]
-  read_xdc -ref hdmi_out_rgb2dvi_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc]
-  read_xdc -ref hdmi_out_dvi2rgb_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc]
-  read_xdc -prop_thru_buffers -ref hdmi_out_axi_quad_spi_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc]
-  read_xdc -ref hdmi_out_axi_quad_spi_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc]
-  read_xdc -ref hdmi_out_ila_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc
-  set_property processing_order EARLY [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc]
-  read_xdc C:/hdl_projects/Z7-20/hdmi_out/src/constraints/ArtyZ7_B.xdc
-  read_xdc -ref hdmi_out_axi_vdma_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc]
-  read_xdc -ref hdmi_out_rgb2dvi_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
-  read_xdc -ref hdmi_out_v_axi4s_vid_out_0_0 -cells inst c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc]
-  read_xdc -ref hdmi_out_v_tc_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc]
-  read_xdc -ref hdmi_out_v_vid_in_axi4s_0_0 -cells inst c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc]
-  read_xdc -ref hdmi_out_v_tc_1_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc]
-  read_xdc -ref hdmi_out_axi_quad_spi_0_0 -cells U0 c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc]
-  read_xdc -ref hdmi_out_auto_us_df_0 -cells inst c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc
-  set_property processing_order LATE [get_files c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc]
+  add_files -quiet C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/synth_1/hdmi_out_wrapper.dcp
+  read_xdc -prop_thru_buffers -ref hdmi_out_axi_gpio_hdmi_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc]
+  read_xdc -ref hdmi_out_axi_gpio_hdmi_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc]
+  read_xdc -ref hdmi_out_axi_vdma_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref hdmi_out_proc_sys_reset_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc]
+  read_xdc -ref hdmi_out_proc_sys_reset_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref hdmi_out_proc_sys_reset_1_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc]
+  read_xdc -ref hdmi_out_proc_sys_reset_1_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc]
+  read_xdc -ref hdmi_out_processing_system7_0_0 -cells inst c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc]
+  read_xdc -ref hdmi_out_rgb2dvi_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc]
+  read_xdc -ref hdmi_out_dvi2rgb_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc]
+  read_xdc -prop_thru_buffers -ref hdmi_out_axi_quad_spi_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc]
+  read_xdc -ref hdmi_out_axi_quad_spi_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc]
+  read_xdc -ref hdmi_out_ila_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc
+  set_property processing_order EARLY [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc]
+  read_xdc C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/constrs_1/imports/constraints/ArtyZ7_B.xdc
+  read_xdc -ref hdmi_out_axi_vdma_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc]
+  read_xdc -ref hdmi_out_rgb2dvi_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
+  read_xdc -ref hdmi_out_v_axi4s_vid_out_0_0 -cells inst c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc]
+  read_xdc -ref hdmi_out_v_tc_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc]
+  read_xdc -ref hdmi_out_v_vid_in_axi4s_0_0 -cells inst c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc]
+  read_xdc -ref hdmi_out_v_tc_1_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc]
+  read_xdc -ref hdmi_out_axi_quad_spi_0_0 -cells U0 c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc]
+  read_xdc -ref hdmi_out_auto_us_df_0 -cells inst c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc
+  set_property processing_order LATE [get_files c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc]
   link_design -top hdmi_out_wrapper -part xc7z020clg400-1
   write_hwdef -file hdmi_out_wrapper.hwdef
   close_msg_db -file init_design.pb

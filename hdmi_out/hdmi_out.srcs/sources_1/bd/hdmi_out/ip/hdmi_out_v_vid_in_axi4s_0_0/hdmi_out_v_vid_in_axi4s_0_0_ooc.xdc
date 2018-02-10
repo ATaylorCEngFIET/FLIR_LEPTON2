@@ -1,4 +1,4 @@
-# (c) Copyright 2012-2017 Xilinx, Inc. All rights reserved.
+# (c) Copyright 2012-2018 Xilinx, Inc. All rights reserved.
 # 
 # This file contains confidential and proprietary information
 # of Xilinx, Inc. and is protected under U.S. and
@@ -54,6 +54,6 @@
 
 create_clock -period 10 -name vid_io_in_clk [get_ports vid_io_in_clk]
 
-create_clock -period 7 -name aclk [get_ports aclk]
+create_clock -period 5 -name aclk [get_ports aclk]
 
 

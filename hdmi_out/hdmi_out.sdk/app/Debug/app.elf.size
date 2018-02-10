@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
- 116688	   2788	24910464	25029940	17ded34	app.elf
+ 110456	   2788	14772864	14886108	 e324dc	app.elf

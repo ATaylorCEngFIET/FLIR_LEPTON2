@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -50,10 +50,10 @@
 // IP VLNV: xilinx.com:ip:axi_register_slice:2.1
 // IP Revision: 11
 
-(* X_CORE_INFO = "axi_register_slice_v2_1_11_axi_register_slice,Vivado 2016.4" *)
+(* X_CORE_INFO = "axi_register_slice_v2_1_11_axi_register_slice,Vivado 2016.4_AR70065" *)
 (* CHECK_LICENSE_TYPE = "hdmi_out_s00_regslice_0,axi_register_slice_v2_1_11_axi_register_slice,{}" *)
-(* CORE_GENERATION_INFO = "hdmi_out_s00_regslice_0,axi_register_slice_v2_1_11_axi_register_slice,{x_ipProduct=Vivado 2016.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_register_slice,x_ipVersion=2.1,x_ipCoreRevision=11,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_REG_CONFIG_AW=0,C_REG_CONFIG_W=0,C_REG_C\
-ONFIG_B=0,C_REG_CONFIG_AR=7,C_REG_CONFIG_R=1}" *)
+(* CORE_GENERATION_INFO = "hdmi_out_s00_regslice_0,axi_register_slice_v2_1_11_axi_register_slice,{x_ipProduct=Vivado 2016.4_AR70065,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_register_slice,x_ipVersion=2.1,x_ipCoreRevision=11,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_REG_CONFIG_AW=0,C_REG_CONFIG_W=0\
+,C_REG_CONFIG_B=0,C_REG_CONFIG_AR=7,C_REG_CONFIG_R=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module hdmi_out_s00_regslice_0 (
   aclk,

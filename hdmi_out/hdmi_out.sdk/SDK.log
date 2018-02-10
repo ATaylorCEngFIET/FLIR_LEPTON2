@@ -12686,3 +12686,1732 @@ con
 
 17:12:35 INFO  : Launch script is exported to file 'C:\hdl_projects\Z7-20\hdmi_out\proj\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
 17:14:17 INFO  : Disconnected from the channel tcfchan#8.
+10:33:34 INFO  : Registering command handlers for SDK TCF services
+10:33:34 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\temp_xsdb_launch_script.tcl
+10:33:38 INFO  : XSCT server has started successfully.
+10:33:41 INFO  : Successfully done setting XSCT server connection channel  
+10:33:41 INFO  : Processing command line option -hwspec C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper.hdf.
+10:33:41 INFO  : Successfully done setting SDK workspace  
+10:33:41 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.3\patches\AR70065\vivado' *****
+10:33:46 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1504283490934,  Project:1498162068901
+10:33:46 INFO  : Project hdmi_out_wrapper_hw_platform_0's source hardware specification located at C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/hdmi_out_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+10:33:50 INFO  : Project hdmi_out_wrapper_hw_platform_0's source hardware specification location will not be monitored anymore.
+10:57:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:57:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:08:39 INFO  : Registering command handlers for SDK TCF services
+11:08:39 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\temp_xsdb_launch_script.tcl
+11:08:42 INFO  : XSCT server has started successfully.
+11:08:42 INFO  : Successfully done setting XSCT server connection channel  
+11:08:43 INFO  : Successfully done setting SDK workspace  
+11:08:43 INFO  : Processing command line option -hwspec C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper.hdf.
+11:08:43 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.3\patches\AR70065\vivado' *****
+11:14:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:14:06 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:16:40 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:16:40 INFO  : 'jtag frequency' command is executed.
+11:16:40 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:16:40 INFO  : Context for 'APU' is selected.
+11:16:40 INFO  : System reset is completed.
+11:16:43 INFO  : 'after 3000' command is executed.
+11:16:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:16:46 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:16:46 INFO  : Context for 'APU' is selected.
+11:16:46 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:16:46 INFO  : Context for 'APU' is selected.
+11:16:47 INFO  : 'ps7_init' command is executed.
+11:16:47 INFO  : 'ps7_post_config' command is executed.
+11:16:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:47 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:16:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:16:47 INFO  : Memory regions updated for context APU
+11:16:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:47 INFO  : 'con' command is executed.
+11:16:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:16:47 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:26:40 INFO  : Disconnected from the channel tcfchan#1.
+11:26:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:26:41 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:26:44 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:26:44 INFO  : 'jtag frequency' command is executed.
+11:26:44 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:26:45 INFO  : Context for 'APU' is selected.
+11:26:45 INFO  : System reset is completed.
+11:26:48 INFO  : 'after 3000' command is executed.
+11:26:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:26:50 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:26:50 INFO  : Context for 'APU' is selected.
+11:26:54 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:26:54 INFO  : Context for 'APU' is selected.
+11:26:54 INFO  : 'ps7_init' command is executed.
+11:26:54 INFO  : 'ps7_post_config' command is executed.
+11:26:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:26:55 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:26:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:26:55 INFO  : Memory regions updated for context APU
+11:26:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:26:55 INFO  : 'con' command is executed.
+11:26:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:26:55 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:27:27 INFO  : Disconnected from the channel tcfchan#2.
+11:27:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:27:28 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:27:29 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:27:29 INFO  : 'jtag frequency' command is executed.
+11:27:29 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:27:29 INFO  : Context for 'APU' is selected.
+11:27:30 INFO  : System reset is completed.
+11:27:33 INFO  : 'after 3000' command is executed.
+11:27:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:27:36 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:27:36 INFO  : Context for 'APU' is selected.
+11:27:40 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:27:40 INFO  : Context for 'APU' is selected.
+11:27:40 INFO  : 'ps7_init' command is executed.
+11:27:40 INFO  : 'ps7_post_config' command is executed.
+11:27:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:27:41 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:27:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:27:41 INFO  : Memory regions updated for context APU
+11:27:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:27:41 INFO  : 'con' command is executed.
+11:27:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:27:41 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:31:32 INFO  : Disconnected from the channel tcfchan#3.
+11:31:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:33 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:31:34 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:31:34 INFO  : 'jtag frequency' command is executed.
+11:31:34 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:31:34 INFO  : Context for 'APU' is selected.
+11:31:34 INFO  : System reset is completed.
+11:31:37 INFO  : 'after 3000' command is executed.
+11:31:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:31:39 ERROR : 'fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit' is cancelled.
+11:31:39 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: 'fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit' is cancelled.
+11:31:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+11:31:39 INFO  : Issued abort command to xsdb.
+11:32:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:05 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:32:06 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:32:06 INFO  : 'jtag frequency' command is executed.
+11:32:06 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:32:06 INFO  : Context for 'APU' is selected.
+11:32:06 INFO  : System reset is completed.
+11:32:09 INFO  : 'after 3000' command is executed.
+11:32:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:32:11 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:32:11 INFO  : Context for 'APU' is selected.
+11:32:15 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:32:15 INFO  : Context for 'APU' is selected.
+11:32:15 INFO  : 'ps7_init' command is executed.
+11:32:15 INFO  : 'ps7_post_config' command is executed.
+11:32:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:16 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:32:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:32:16 INFO  : Memory regions updated for context APU
+11:32:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:16 INFO  : 'con' command is executed.
+11:32:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:32:16 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:32:57 INFO  : Disconnected from the channel tcfchan#4.
+11:32:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:59 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:32:59 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:32:59 INFO  : 'jtag frequency' command is executed.
+11:32:59 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:33:00 INFO  : Context for 'APU' is selected.
+11:33:00 INFO  : System reset is completed.
+11:33:03 INFO  : 'after 3000' command is executed.
+11:33:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:33:06 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:33:07 INFO  : Context for 'APU' is selected.
+11:33:10 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:33:10 INFO  : Context for 'APU' is selected.
+11:33:11 INFO  : 'ps7_init' command is executed.
+11:33:11 INFO  : 'ps7_post_config' command is executed.
+11:33:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:33:11 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:33:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:33:11 INFO  : Memory regions updated for context APU
+11:33:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:33:11 INFO  : 'con' command is executed.
+11:33:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:33:11 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:36:35 INFO  : Disconnected from the channel tcfchan#5.
+11:36:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:36:36 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:36:36 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:36:36 INFO  : 'jtag frequency' command is executed.
+11:36:36 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:36:37 INFO  : Context for 'APU' is selected.
+11:36:37 INFO  : System reset is completed.
+11:36:40 INFO  : 'after 3000' command is executed.
+11:36:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:36:42 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:36:42 INFO  : Context for 'APU' is selected.
+11:36:46 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:36:46 INFO  : Context for 'APU' is selected.
+11:36:46 INFO  : 'ps7_init' command is executed.
+11:36:46 INFO  : 'ps7_post_config' command is executed.
+11:36:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:47 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:36:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:36:47 INFO  : Memory regions updated for context APU
+11:36:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:47 INFO  : 'con' command is executed.
+11:36:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:36:47 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:37:09 INFO  : Disconnected from the channel tcfchan#6.
+11:37:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:37:10 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:37:11 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:37:11 INFO  : 'jtag frequency' command is executed.
+11:37:11 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:37:12 INFO  : Context for 'APU' is selected.
+11:37:12 INFO  : System reset is completed.
+11:37:15 INFO  : 'after 3000' command is executed.
+11:37:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:37:18 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:37:18 INFO  : Context for 'APU' is selected.
+11:37:21 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:37:21 INFO  : Context for 'APU' is selected.
+11:37:22 INFO  : 'ps7_init' command is executed.
+11:37:22 INFO  : 'ps7_post_config' command is executed.
+11:37:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:22 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:37:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:37:22 INFO  : Memory regions updated for context APU
+11:37:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:22 INFO  : 'con' command is executed.
+11:37:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:37:22 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:41:22 INFO  : Disconnected from the channel tcfchan#7.
+11:41:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:23 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:41:24 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:41:24 INFO  : 'jtag frequency' command is executed.
+11:41:24 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:41:24 INFO  : Context for 'APU' is selected.
+11:41:24 INFO  : System reset is completed.
+11:41:27 INFO  : 'after 3000' command is executed.
+11:41:36 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+1. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+1. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+11:41:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+11:42:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:42:34 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:42:35 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:42:35 INFO  : 'jtag frequency' command is executed.
+11:42:35 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:42:35 INFO  : Context for 'APU' is selected.
+11:42:35 INFO  : System reset is completed.
+11:42:38 INFO  : 'after 3000' command is executed.
+11:42:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:42:40 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:42:40 INFO  : Context for 'APU' is selected.
+11:42:44 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:42:44 INFO  : Context for 'APU' is selected.
+11:42:45 INFO  : 'ps7_init' command is executed.
+11:42:45 INFO  : 'ps7_post_config' command is executed.
+11:42:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:42:45 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:42:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:42:45 INFO  : Memory regions updated for context APU
+11:42:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:42:45 INFO  : 'con' command is executed.
+11:42:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:42:45 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:46:34 INFO  : Disconnected from the channel tcfchan#8.
+11:46:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:46:35 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:46:35 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:46:35 INFO  : 'jtag frequency' command is executed.
+11:46:35 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:46:35 INFO  : Context for 'APU' is selected.
+11:46:35 INFO  : System reset is completed.
+11:46:38 INFO  : 'after 3000' command is executed.
+11:46:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:46:41 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:46:41 INFO  : Context for 'APU' is selected.
+11:46:44 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:46:44 INFO  : Context for 'APU' is selected.
+11:46:45 INFO  : 'ps7_init' command is executed.
+11:46:45 INFO  : 'ps7_post_config' command is executed.
+11:46:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:46:45 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:46:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:46:45 INFO  : Memory regions updated for context APU
+11:46:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:46:45 INFO  : 'con' command is executed.
+11:46:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:46:45 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:50:25 INFO  : Disconnected from the channel tcfchan#9.
+11:50:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:50:26 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:50:26 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:50:26 INFO  : 'jtag frequency' command is executed.
+11:50:26 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:50:26 INFO  : Context for 'APU' is selected.
+11:50:26 INFO  : System reset is completed.
+11:50:29 INFO  : 'after 3000' command is executed.
+11:50:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:50:32 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:50:32 INFO  : Context for 'APU' is selected.
+11:50:35 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:50:35 INFO  : Context for 'APU' is selected.
+11:50:36 INFO  : 'ps7_init' command is executed.
+11:50:36 INFO  : 'ps7_post_config' command is executed.
+11:50:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:50:36 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:50:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:50:36 INFO  : Memory regions updated for context APU
+11:50:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:50:36 INFO  : 'con' command is executed.
+11:50:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:50:36 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+11:55:11 INFO  : Disconnected from the channel tcfchan#10.
+11:55:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:12 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+11:55:13 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+11:55:13 INFO  : 'jtag frequency' command is executed.
+11:55:13 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:55:13 INFO  : Context for 'APU' is selected.
+11:55:13 INFO  : System reset is completed.
+11:55:16 INFO  : 'after 3000' command is executed.
+11:55:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+11:55:18 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+11:55:18 INFO  : Context for 'APU' is selected.
+11:55:22 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+11:55:22 INFO  : Context for 'APU' is selected.
+11:55:22 INFO  : 'ps7_init' command is executed.
+11:55:22 INFO  : 'ps7_post_config' command is executed.
+11:55:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:55:23 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:55:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+11:55:23 INFO  : Memory regions updated for context APU
+11:55:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:55:23 INFO  : 'con' command is executed.
+11:55:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+11:55:23 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+12:00:43 INFO  : Disconnected from the channel tcfchan#11.
+12:00:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:00:45 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+12:00:45 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+12:00:45 INFO  : 'jtag frequency' command is executed.
+12:00:45 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:00:45 INFO  : Context for 'APU' is selected.
+12:00:45 INFO  : System reset is completed.
+12:00:48 INFO  : 'after 3000' command is executed.
+12:00:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+12:00:50 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+12:00:51 INFO  : Context for 'APU' is selected.
+12:00:54 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+12:00:54 INFO  : Context for 'APU' is selected.
+12:00:55 INFO  : 'ps7_init' command is executed.
+12:00:55 INFO  : 'ps7_post_config' command is executed.
+12:00:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:55 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:00:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+12:00:55 INFO  : Memory regions updated for context APU
+12:00:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:00:55 INFO  : 'con' command is executed.
+12:00:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+12:00:55 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+12:03:05 INFO  : Disconnected from the channel tcfchan#12.
+12:03:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:03:06 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+12:03:06 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+12:03:06 INFO  : 'jtag frequency' command is executed.
+12:03:06 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:03:06 INFO  : Context for 'APU' is selected.
+12:03:07 INFO  : System reset is completed.
+12:03:10 INFO  : 'after 3000' command is executed.
+12:03:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+12:03:12 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+12:03:12 INFO  : Context for 'APU' is selected.
+12:03:15 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+12:03:15 INFO  : Context for 'APU' is selected.
+12:03:16 INFO  : 'ps7_init' command is executed.
+12:03:16 INFO  : 'ps7_post_config' command is executed.
+12:03:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:16 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:03:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+12:03:16 INFO  : Memory regions updated for context APU
+12:03:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:16 INFO  : 'con' command is executed.
+12:03:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+12:03:16 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+12:03:35 INFO  : Disconnected from the channel tcfchan#13.
+12:03:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:03:36 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+12:03:37 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+12:03:37 INFO  : 'jtag frequency' command is executed.
+12:03:37 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:03:37 INFO  : Context for 'APU' is selected.
+12:03:37 INFO  : System reset is completed.
+12:03:40 INFO  : 'after 3000' command is executed.
+12:03:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+12:03:42 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+12:03:42 INFO  : Context for 'APU' is selected.
+12:03:45 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+12:03:45 INFO  : Context for 'APU' is selected.
+12:03:45 INFO  : 'ps7_init' command is executed.
+12:03:45 INFO  : 'ps7_post_config' command is executed.
+12:03:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:46 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:03:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+12:03:46 INFO  : Memory regions updated for context APU
+12:03:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:03:46 INFO  : 'con' command is executed.
+12:03:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+12:03:46 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+12:04:02 INFO  : Disconnected from the channel tcfchan#14.
+12:04:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:03 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+12:04:04 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+12:04:04 INFO  : 'jtag frequency' command is executed.
+12:04:04 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:04:05 INFO  : Context for 'APU' is selected.
+12:04:05 INFO  : System reset is completed.
+12:04:08 INFO  : 'after 3000' command is executed.
+12:04:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+12:04:11 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+12:04:11 INFO  : Context for 'APU' is selected.
+12:04:15 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+12:04:15 INFO  : Context for 'APU' is selected.
+12:04:15 INFO  : 'ps7_init' command is executed.
+12:04:15 INFO  : 'ps7_post_config' command is executed.
+12:04:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:15 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:04:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+12:04:15 INFO  : Memory regions updated for context APU
+12:04:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:04:15 INFO  : 'con' command is executed.
+12:04:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+12:04:15 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:19:24 INFO  : Disconnected from the channel tcfchan#15.
+13:19:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:19:25 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:19:25 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:19:25 INFO  : 'jtag frequency' command is executed.
+13:19:25 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:19:25 INFO  : Context for 'APU' is selected.
+13:19:26 INFO  : System reset is completed.
+13:19:29 INFO  : 'after 3000' command is executed.
+13:19:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:19:31 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:19:31 INFO  : Context for 'APU' is selected.
+13:19:35 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:19:35 INFO  : Context for 'APU' is selected.
+13:19:35 INFO  : 'ps7_init' command is executed.
+13:19:35 INFO  : 'ps7_post_config' command is executed.
+13:19:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:36 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:19:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:19:36 INFO  : Memory regions updated for context APU
+13:19:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:19:36 INFO  : 'con' command is executed.
+13:19:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:19:36 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:27:43 INFO  : Disconnected from the channel tcfchan#16.
+13:27:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:27:44 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:27:45 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:27:45 INFO  : 'jtag frequency' command is executed.
+13:27:45 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:27:45 INFO  : Context for 'APU' is selected.
+13:27:45 INFO  : System reset is completed.
+13:27:48 INFO  : 'after 3000' command is executed.
+13:27:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:27:51 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:27:51 INFO  : Context for 'APU' is selected.
+13:27:54 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:27:54 INFO  : Context for 'APU' is selected.
+13:27:55 INFO  : 'ps7_init' command is executed.
+13:27:55 INFO  : 'ps7_post_config' command is executed.
+13:27:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:27:55 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:27:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:27:55 INFO  : Memory regions updated for context APU
+13:27:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:27:55 INFO  : 'con' command is executed.
+13:27:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:27:55 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:28:43 INFO  : Disconnected from the channel tcfchan#17.
+13:28:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:28:44 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:28:44 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:28:44 INFO  : 'jtag frequency' command is executed.
+13:28:44 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:28:45 INFO  : Context for 'APU' is selected.
+13:28:45 INFO  : System reset is completed.
+13:28:48 INFO  : 'after 3000' command is executed.
+13:28:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:28:51 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:28:51 INFO  : Context for 'APU' is selected.
+13:28:54 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:28:54 INFO  : Context for 'APU' is selected.
+13:28:55 INFO  : 'ps7_init' command is executed.
+13:28:55 INFO  : 'ps7_post_config' command is executed.
+13:28:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:28:55 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:28:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:28:55 INFO  : Memory regions updated for context APU
+13:28:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:28:55 INFO  : 'con' command is executed.
+13:28:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:28:55 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:29:54 INFO  : Disconnected from the channel tcfchan#18.
+13:29:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:29:55 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:29:55 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:29:55 INFO  : 'jtag frequency' command is executed.
+13:29:55 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:29:55 INFO  : Context for 'APU' is selected.
+13:29:55 INFO  : System reset is completed.
+13:29:58 INFO  : 'after 3000' command is executed.
+13:29:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:30:01 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:30:01 INFO  : Context for 'APU' is selected.
+13:30:05 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:30:05 INFO  : Context for 'APU' is selected.
+13:30:05 INFO  : 'ps7_init' command is executed.
+13:30:05 INFO  : 'ps7_post_config' command is executed.
+13:30:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:30:06 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:30:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:30:06 INFO  : Memory regions updated for context APU
+13:30:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:30:06 INFO  : 'con' command is executed.
+13:30:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:30:06 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:30:23 INFO  : Disconnected from the channel tcfchan#19.
+13:30:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:30:24 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:30:25 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:30:25 INFO  : 'jtag frequency' command is executed.
+13:30:25 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:30:26 INFO  : Context for 'APU' is selected.
+13:30:26 INFO  : System reset is completed.
+13:30:29 INFO  : 'after 3000' command is executed.
+13:30:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:30:32 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:30:32 INFO  : Context for 'APU' is selected.
+13:30:36 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:30:36 INFO  : Context for 'APU' is selected.
+13:30:36 INFO  : 'ps7_init' command is executed.
+13:30:36 INFO  : 'ps7_post_config' command is executed.
+13:30:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:30:37 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:30:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:30:37 INFO  : Memory regions updated for context APU
+13:30:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:30:37 INFO  : 'con' command is executed.
+13:30:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:30:37 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:31:50 INFO  : Disconnected from the channel tcfchan#20.
+13:31:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:31:51 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:31:51 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:31:51 INFO  : 'jtag frequency' command is executed.
+13:31:51 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:31:51 INFO  : Context for 'APU' is selected.
+13:31:51 INFO  : System reset is completed.
+13:31:54 INFO  : 'after 3000' command is executed.
+13:31:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:31:57 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:31:57 INFO  : Context for 'APU' is selected.
+13:32:00 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:32:00 INFO  : Context for 'APU' is selected.
+13:32:01 INFO  : 'ps7_init' command is executed.
+13:32:01 INFO  : 'ps7_post_config' command is executed.
+13:32:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:01 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:32:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:32:01 INFO  : Memory regions updated for context APU
+13:32:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:01 INFO  : 'con' command is executed.
+13:32:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:32:01 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:32:31 INFO  : Disconnected from the channel tcfchan#21.
+13:32:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:32:32 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:32:32 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:32:32 INFO  : 'jtag frequency' command is executed.
+13:32:32 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:32:33 INFO  : Context for 'APU' is selected.
+13:32:33 INFO  : System reset is completed.
+13:32:36 INFO  : 'after 3000' command is executed.
+13:32:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:32:40 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:32:40 INFO  : Context for 'APU' is selected.
+13:32:43 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:32:43 INFO  : Context for 'APU' is selected.
+13:32:44 INFO  : 'ps7_init' command is executed.
+13:32:44 INFO  : 'ps7_post_config' command is executed.
+13:32:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:44 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:32:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:32:44 INFO  : Memory regions updated for context APU
+13:32:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:32:44 INFO  : 'con' command is executed.
+13:32:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:32:44 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:33:40 INFO  : Disconnected from the channel tcfchan#22.
+13:33:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:41 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:33:41 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:33:41 INFO  : 'jtag frequency' command is executed.
+13:33:41 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:33:41 INFO  : Context for 'APU' is selected.
+13:33:41 INFO  : System reset is completed.
+13:33:44 INFO  : 'after 3000' command is executed.
+13:33:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:33:47 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:33:47 INFO  : Context for 'APU' is selected.
+13:33:50 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:33:50 INFO  : Context for 'APU' is selected.
+13:33:51 INFO  : 'ps7_init' command is executed.
+13:33:51 INFO  : 'ps7_post_config' command is executed.
+13:33:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:51 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:33:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:33:51 INFO  : Memory regions updated for context APU
+13:33:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:51 INFO  : 'con' command is executed.
+13:33:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:33:51 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:34:40 INFO  : Disconnected from the channel tcfchan#23.
+13:34:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:34:41 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:34:42 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:34:42 INFO  : 'jtag frequency' command is executed.
+13:34:42 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:34:42 INFO  : Context for 'APU' is selected.
+13:34:42 INFO  : System reset is completed.
+13:34:45 INFO  : 'after 3000' command is executed.
+13:34:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:34:48 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:34:48 INFO  : Context for 'APU' is selected.
+13:34:51 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:34:51 INFO  : Context for 'APU' is selected.
+13:34:52 INFO  : 'ps7_init' command is executed.
+13:34:52 INFO  : 'ps7_post_config' command is executed.
+13:34:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:52 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:34:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:34:52 INFO  : Memory regions updated for context APU
+13:34:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:52 INFO  : 'con' command is executed.
+13:34:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:34:52 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:36:13 INFO  : Disconnected from the channel tcfchan#24.
+13:36:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:36:14 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:36:14 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:36:14 INFO  : 'jtag frequency' command is executed.
+13:36:14 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:36:15 INFO  : Context for 'APU' is selected.
+13:36:15 INFO  : System reset is completed.
+13:36:18 INFO  : 'after 3000' command is executed.
+13:36:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:36:22 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:36:22 INFO  : Context for 'APU' is selected.
+13:36:25 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:36:25 INFO  : Context for 'APU' is selected.
+13:36:26 INFO  : 'ps7_init' command is executed.
+13:36:26 INFO  : 'ps7_post_config' command is executed.
+13:36:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:36:26 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:36:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:36:26 INFO  : Memory regions updated for context APU
+13:36:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:36:27 INFO  : 'con' command is executed.
+13:36:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:36:27 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:41:54 INFO  : Disconnected from the channel tcfchan#25.
+13:41:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:41:55 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:41:55 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:41:55 INFO  : 'jtag frequency' command is executed.
+13:41:55 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:41:55 INFO  : Context for 'APU' is selected.
+13:41:56 INFO  : System reset is completed.
+13:41:59 INFO  : 'after 3000' command is executed.
+13:41:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:42:01 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:42:01 INFO  : Context for 'APU' is selected.
+13:42:05 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:42:05 INFO  : Context for 'APU' is selected.
+13:42:05 INFO  : 'ps7_init' command is executed.
+13:42:05 INFO  : 'ps7_post_config' command is executed.
+13:42:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:06 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:42:06 INFO  : Memory regions updated for context APU
+13:42:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:06 INFO  : 'con' command is executed.
+13:42:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:42:06 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:42:22 INFO  : Disconnected from the channel tcfchan#26.
+13:42:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:23 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:42:23 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:42:23 INFO  : 'jtag frequency' command is executed.
+13:42:23 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:42:23 INFO  : Context for 'APU' is selected.
+13:42:23 INFO  : System reset is completed.
+13:42:26 INFO  : 'after 3000' command is executed.
+13:42:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:42:30 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:42:30 INFO  : Context for 'APU' is selected.
+13:42:34 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:42:34 INFO  : Context for 'APU' is selected.
+13:42:34 INFO  : 'ps7_init' command is executed.
+13:42:34 INFO  : 'ps7_post_config' command is executed.
+13:42:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:35 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:42:35 INFO  : Memory regions updated for context APU
+13:42:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:35 INFO  : 'con' command is executed.
+13:42:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:42:35 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:43:10 INFO  : Disconnected from the channel tcfchan#27.
+13:43:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:43:11 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:43:12 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:43:12 INFO  : 'jtag frequency' command is executed.
+13:43:12 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:43:12 INFO  : Context for 'APU' is selected.
+13:43:12 INFO  : System reset is completed.
+13:43:15 INFO  : 'after 3000' command is executed.
+13:43:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:43:17 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:43:17 INFO  : Context for 'APU' is selected.
+13:43:21 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:43:21 INFO  : Context for 'APU' is selected.
+13:43:21 INFO  : 'ps7_init' command is executed.
+13:43:21 INFO  : 'ps7_post_config' command is executed.
+13:43:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:43:22 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:43:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:43:22 INFO  : Memory regions updated for context APU
+13:43:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:43:22 INFO  : 'con' command is executed.
+13:43:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:43:22 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:48:22 INFO  : Disconnected from the channel tcfchan#28.
+13:48:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:48:23 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:48:23 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:48:23 INFO  : 'jtag frequency' command is executed.
+13:48:23 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:48:23 INFO  : Context for 'APU' is selected.
+13:48:23 INFO  : System reset is completed.
+13:48:26 INFO  : 'after 3000' command is executed.
+13:48:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:48:29 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:48:29 INFO  : Context for 'APU' is selected.
+13:48:32 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:48:32 INFO  : Context for 'APU' is selected.
+13:48:33 INFO  : 'ps7_init' command is executed.
+13:48:33 INFO  : 'ps7_post_config' command is executed.
+13:48:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:33 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:48:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:48:33 INFO  : Memory regions updated for context APU
+13:48:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:48:33 INFO  : 'con' command is executed.
+13:48:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:48:33 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:48:49 INFO  : Disconnected from the channel tcfchan#29.
+13:48:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:48:50 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:48:50 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:48:50 INFO  : 'jtag frequency' command is executed.
+13:48:50 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:48:51 INFO  : Context for 'APU' is selected.
+13:48:51 INFO  : System reset is completed.
+13:48:54 INFO  : 'after 3000' command is executed.
+13:48:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:48:58 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:48:58 INFO  : Context for 'APU' is selected.
+13:49:01 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:49:01 INFO  : Context for 'APU' is selected.
+13:49:02 INFO  : 'ps7_init' command is executed.
+13:49:02 INFO  : 'ps7_post_config' command is executed.
+13:49:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:49:03 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:49:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:49:03 INFO  : Memory regions updated for context APU
+13:49:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:49:03 INFO  : 'con' command is executed.
+13:49:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:49:03 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+13:50:26 INFO  : Disconnected from the channel tcfchan#30.
+13:50:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:27 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+13:50:27 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+13:50:27 INFO  : 'jtag frequency' command is executed.
+13:50:27 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:50:27 INFO  : Context for 'APU' is selected.
+13:50:27 INFO  : System reset is completed.
+13:50:30 INFO  : 'after 3000' command is executed.
+13:50:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+13:50:33 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+13:50:33 INFO  : Context for 'APU' is selected.
+13:50:36 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+13:50:36 INFO  : Context for 'APU' is selected.
+13:50:37 INFO  : 'ps7_init' command is executed.
+13:50:37 INFO  : 'ps7_post_config' command is executed.
+13:50:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:37 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:50:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:50:37 INFO  : Memory regions updated for context APU
+13:50:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:50:37 INFO  : 'con' command is executed.
+13:50:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+13:50:37 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+14:07:16 INFO  : Disconnected from the channel tcfchan#31.
+14:07:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:07:17 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+14:07:18 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+14:07:18 INFO  : 'jtag frequency' command is executed.
+14:07:18 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:07:18 INFO  : Context for 'APU' is selected.
+14:07:18 INFO  : System reset is completed.
+14:07:21 INFO  : 'after 3000' command is executed.
+14:07:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+14:07:23 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+14:07:23 INFO  : Context for 'APU' is selected.
+14:07:27 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+14:07:27 INFO  : Context for 'APU' is selected.
+14:07:28 INFO  : 'ps7_init' command is executed.
+14:07:28 INFO  : 'ps7_post_config' command is executed.
+14:07:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:07:28 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:07:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+14:07:28 INFO  : Memory regions updated for context APU
+14:07:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:07:28 INFO  : 'con' command is executed.
+14:07:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+14:07:28 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+14:15:14 INFO  : Disconnected from the channel tcfchan#32.
+14:15:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:15:15 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+14:15:15 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+14:15:15 INFO  : 'jtag frequency' command is executed.
+14:15:15 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:15:15 INFO  : Context for 'APU' is selected.
+14:15:15 INFO  : System reset is completed.
+14:15:18 INFO  : 'after 3000' command is executed.
+14:15:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+14:15:20 ERROR : 'fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit' is cancelled.
+14:15:20 INFO  : Issued abort command to xsdb.
+14:15:20 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: 'fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit' is cancelled.
+14:15:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+14:15:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:15:38 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+14:15:38 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+14:15:38 INFO  : 'jtag frequency' command is executed.
+14:15:38 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:15:38 INFO  : Context for 'APU' is selected.
+14:15:39 INFO  : System reset is completed.
+14:15:42 INFO  : 'after 3000' command is executed.
+14:15:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+14:15:44 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+14:15:44 INFO  : Context for 'APU' is selected.
+14:15:48 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+14:15:48 INFO  : Context for 'APU' is selected.
+14:15:48 INFO  : 'ps7_init' command is executed.
+14:15:48 INFO  : 'ps7_post_config' command is executed.
+14:15:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:15:49 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:15:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+14:15:49 INFO  : Memory regions updated for context APU
+14:15:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:15:49 INFO  : 'con' command is executed.
+14:15:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+14:15:49 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+14:16:30 INFO  : Disconnected from the channel tcfchan#33.
+14:16:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:31 WARN  : SDK version '2016.4' doesn't match hw_server version '2017.2'. Some debug features may not work.
+14:16:31 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+14:16:31 INFO  : 'jtag frequency' command is executed.
+14:16:32 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:16:32 INFO  : Context for 'APU' is selected.
+14:16:32 INFO  : System reset is completed.
+14:16:35 INFO  : 'after 3000' command is executed.
+14:16:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+14:16:38 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+14:16:38 INFO  : Context for 'APU' is selected.
+14:16:41 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+14:16:41 INFO  : Context for 'APU' is selected.
+14:16:42 INFO  : 'ps7_init' command is executed.
+14:16:42 INFO  : 'ps7_post_config' command is executed.
+14:16:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:42 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:16:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+14:16:42 INFO  : Memory regions updated for context APU
+14:16:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:42 INFO  : 'con' command is executed.
+14:16:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+14:16:42 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+14:24:24 INFO  : Invoking Bootgen: bootgen -image app.bif -arch zynq -o C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\app\bootimage\BOOT.bin
+14:24:24 INFO  : Creating new bif file C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\app\bootimage\app.bif
+14:24:26 INFO  : Bootgen command execution is done.
+14:30:23 INFO  : Disconnected from the channel tcfchan#34.
+15:03:23 ERROR : Failed to closehw "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf"
+Reason: Cannot close hw design 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+Design is not opened in the current session.
+
+15:04:07 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\temp_xsdb_launch_script.tcl
+15:04:10 INFO  : XSCT server has started successfully.
+15:04:10 INFO  : Successfully done setting XSCT server connection channel  
+15:04:10 INFO  : Successfully done setting SDK workspace  
+15:04:12 INFO  : Registering command handlers for SDK TCF services
+15:04:12 INFO  : Processing command line option -hwspec C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper.hdf.
+15:04:12 INFO  : ***** MYVIVADO is set to 'C:\Xilinx\Vivado\2017.3\patches\AR70065\vivado' *****
+15:06:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:37 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+15:06:37 INFO  : 'jtag frequency' command is executed.
+15:06:37 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:06:38 INFO  : Context for 'APU' is selected.
+15:06:38 INFO  : System reset is completed.
+15:06:41 INFO  : 'after 3000' command is executed.
+15:06:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+15:06:44 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+15:06:44 INFO  : Context for 'APU' is selected.
+15:06:44 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+15:06:44 INFO  : Context for 'APU' is selected.
+15:06:45 INFO  : 'ps7_init' command is executed.
+15:06:45 INFO  : 'ps7_post_config' command is executed.
+15:06:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:06:45 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:06:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+15:06:45 INFO  : Memory regions updated for context APU
+15:06:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:06:45 INFO  : 'con' command is executed.
+15:06:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+15:06:45 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+15:09:36 INFO  : Disconnected from the channel tcfchan#1.
+15:09:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:37 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+15:09:37 INFO  : 'jtag frequency' command is executed.
+15:09:37 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:09:37 INFO  : Context for 'APU' is selected.
+15:09:38 INFO  : System reset is completed.
+15:09:41 INFO  : 'after 3000' command is executed.
+15:09:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+15:09:43 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+15:09:43 INFO  : Context for 'APU' is selected.
+15:09:46 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+15:09:46 INFO  : Context for 'APU' is selected.
+15:09:47 INFO  : 'ps7_init' command is executed.
+15:09:47 INFO  : 'ps7_post_config' command is executed.
+15:09:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:47 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:09:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+15:09:47 INFO  : Memory regions updated for context APU
+15:09:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:47 INFO  : 'con' command is executed.
+15:09:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+15:09:47 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+15:10:57 INFO  : Disconnected from the channel tcfchan#2.
+15:10:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:10:58 INFO  : Jtag cable 'Digilent Arty Z7 003017A4CA9CA' is selected.
+15:10:59 INFO  : 'jtag frequency' command is executed.
+15:10:59 INFO  : Sourcing of 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:10:59 INFO  : Context for 'APU' is selected.
+15:10:59 INFO  : System reset is completed.
+15:11:02 INFO  : 'after 3000' command is executed.
+15:11:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1' command is executed.
+15:11:05 INFO  : FPGA configured successfully with bitstream "C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit"
+15:11:05 INFO  : Context for 'APU' is selected.
+15:11:08 INFO  : Hardware design information is loaded from 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf'.
+15:11:08 INFO  : Context for 'APU' is selected.
+15:11:09 INFO  : 'ps7_init' command is executed.
+15:11:09 INFO  : 'ps7_post_config' command is executed.
+15:11:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:09 INFO  : The application 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:11:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA" && level==0} -index 1
+fpga -file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/hdmi_out_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+loadhw C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/hdmi_out_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+dow C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+15:11:09 INFO  : Memory regions updated for context APU
+15:11:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:09 INFO  : 'con' command is executed.
+15:11:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Arty Z7 003017A4CA9CA"} -index 0
+con
+----------------End of Script----------------
+
+15:11:09 INFO  : Launch script is exported to file 'C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app.elf_on_local.tcl'
+15:16:26 INFO  : Invoking Bootgen: bootgen -image app.bif -arch zynq -o C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\app\bootimage\BOOT.bin -w on
+15:16:29 INFO  : Bootgen command execution is done.

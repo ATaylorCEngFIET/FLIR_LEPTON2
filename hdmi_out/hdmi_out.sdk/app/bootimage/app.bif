@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\fsbl\Debug\fsbl.elf
+	C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\hdmi_out_wrapper_hw_platform_0\hdmi_out_wrapper.bit
+	C:\Users\aptay\Documents\GitHub\FLIR_LEPTON2\hdmi_out\hdmi_out.sdk\app\Debug\app.elf
+}

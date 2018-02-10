@@ -67,22 +67,22 @@ XAxiVdma vdma;
 /*
  * Framebuffers for video data
  */
-u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
-u8 *pFrames[DISPLAY_NUM_FRAMES];     //array of pointers to the frame buffers
+u32 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
+u32 *pFrames[DISPLAY_NUM_FRAMES];     //array of pointers to the frame buffers
 u8 SendBuffer[TEST_BUFFER_SIZE];    //I2C TX
 u8 RecvBuffer[TEST_BUFFER_SIZE];    //I2C RX
 
 /* ------------------------------------------------------------ */
 /*				Procedure Definitions							*/
 /* ------------------------------------------------------------ */
-int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId,u8 *frame, u32 width, u32 height, u32 stride);
+int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId,u32 *frame, u32 width, u32 height, u32 stride);
 
 int main(void)
 {
 
 	DemoInitialize();
 	DisplayStop(&dispCtrl);
-	DisplaySetMode(&dispCtrl, &VMODE_640x480);
+	DisplaySetMode(&dispCtrl, &VMODE_640x480);// &VMODE_640x480);
 	DisplayStart(&dispCtrl);
 	//fResSet = 1;
 	IicPsMasterPolledExample(IIC_DEVICE_ID, SPI_DEVICE_ID,pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE );
@@ -149,7 +149,7 @@ void DemoInitialize()
 }
 
 
-int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId,u8 *frame, u32 width, u32 height, u32 stride)
+int IicPsMasterPolledExample(u16 DeviceId, u16 SpiDeviceId,u32 *frame, u32 width, u32 height, u32 stride)
 {
 	int Status,i,segment,x,y,iPixelAddr;
 	XIicPs_Config *Config;
@@ -348,21 +348,40 @@ for(segment = 0; segment <loop; segment++){
 }
 //move image to the output buffer
 //for(x = 0; x < (80); x++)
-for(x = 0; x < (640); x++)
+//for(x = 0; x < (640); x++)
+//		{
+//			iPixelAddr = x;
+//			for(y = 0; y < 480; y++)
+//			//for(y = 0; y < 60; y++)
+//			{
+//				frame[iPixelAddr] = Image[(y/8)][(x/8)+4];
+//				frame[iPixelAddr + 1] = 0;
+//				frame[iPixelAddr + 2] = 0;
+//				iPixelAddr += stride;
+//			}
+//		}
+//Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+//
+//}
+
+int scalex, scaley;
+scalex =8;//16;
+scaley =8;//12;
+for(x = 0; x < (640); x++) //6201276
 		{
 			iPixelAddr = x;
-			for(y = 0; y < 480; y++)
-			//for(y = 0; y < 60; y++)
+			for(y = (0); y < (480); y++) //476 720
 			{
-				frame[iPixelAddr] = Image[(y/8)][(x/8)+4];
-				frame[iPixelAddr + 1] = 0;
-				frame[iPixelAddr + 2] = 0;
-				iPixelAddr += stride;
+				//frame[iPixelAddr] = (u32) ((Image[(y/8)][(x/8)+4])<<8);
+				frame[iPixelAddr] = (u32) (((Image[(y/scaley)][(x/scalex)+4])<<16)|
+						((Image[(y/scaley)][(x/scalex)+4])<<8)|
+						((Image[(y/scaley)][(x/scalex)+4])));
+				iPixelAddr += 640;
 			}
 		}
-Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-
+//Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
+
 	return XST_SUCCESS;
 }
 

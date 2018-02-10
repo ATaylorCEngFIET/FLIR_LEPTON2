@@ -1,13 +1,14 @@
+WARNING: [Common 17-306] Update version (2017.3_AR70065) does not match product version (2016.4).
 #-----------------------------------------------------------
-# Vivado v2016.4 (64-bit)
+# Vivado v2016.4_AR70065 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Thu Jun 22 21:03:02 2017
-# Process ID: 2084
-# Current directory: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1
+# Start of session at: Sat Feb 10 14:29:12 2018
+# Process ID: 6964
+# Current directory: C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1
 # Command line: vivado.exe -log hdmi_out_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_out_wrapper.tcl -notrace
-# Log file: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper.vdi
-# Journal file: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1\vivado.jou
+# Log file: C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper.vdi
+# Journal file: C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 Sourcing tcl script 'C:/Xilinx/Vivado/2016.4/scripts/init.tcl'
 source hdmi_out_wrapper.tcl -notrace
@@ -15,74 +16,74 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Netlist 29-17] Analyzing 497 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4_AR70065
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc] for cell 'hdmi_out_i/processing_system7_0/inst'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc] for cell 'hdmi_out_i/processing_system7_0/inst'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hdmi_out_i/dvi2rgb_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hdmi_out_i/dvi2rgb_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'hdmi_out_i/ila_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'hdmi_out_i/ila_0/U0'
-Parsing XDC File [C:/hdl_projects/Z7-20/hdmi_out/src/constraints/ArtyZ7_B.xdc]
-WARNING: [Vivado 12-584] No ports matched 'hdmi_hpd_tri_o[0]'. [C:/hdl_projects/Z7-20/hdmi_out/src/constraints/ArtyZ7_B.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/hdl_projects/Z7-20/hdmi_out/src/constraints/ArtyZ7_B.xdc:37]
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0_board.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xdc] for cell 'hdmi_out_i/axi_gpio_hdmi/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0_board.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xdc] for cell 'hdmi_out_i/proc_sys_reset_1/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc] for cell 'hdmi_out_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xdc] for cell 'hdmi_out_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hdmi_out_i/dvi2rgb_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'hdmi_out_i/dvi2rgb_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_board.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'hdmi_out_i/ila_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'hdmi_out_i/ila_0/U0'
+Parsing XDC File [C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/constrs_1/imports/constraints/ArtyZ7_B.xdc]
+WARNING: [Vivado 12-584] No ports matched 'hdmi_hpd_tri_o[0]'. [C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/constrs_1/imports/constraints/ArtyZ7_B.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/constrs_1/imports/constraints/ArtyZ7_B.xdc:37]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/hdl_projects/Z7-20/hdmi_out/src/constraints/ArtyZ7_B.xdc]
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hdmi_out_i/v_axi4s_vid_out_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc:6]
-INFO: [Timing 38-2] Deriving generated clocks [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc:6]
-get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1183.461 ; gain = 513.402
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hdmi_out_i/v_axi4s_vid_out_0/inst'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hdmi_out_i/v_vid_in_axi4s_0/inst'
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance vid_io_in_clk]'. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc:6]
+Finished Parsing XDC File [C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/constrs_1/imports/constraints/ArtyZ7_B.xdc]
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_vdma_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'hdmi_out_i/rgb2dvi_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hdmi_out_i/v_axi4s_vid_out_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc:6]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc:6]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1185.875 ; gain = 513.641
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'hdmi_out_i/v_axi4s_vid_out_0/inst'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hdmi_out_i/v_vid_in_axi4s_0/inst'
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_ports -scoped_to_current_instance vid_io_in_clk]'. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc:6]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc:11]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc:11]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hdmi_out_i/v_vid_in_axi4s_0/inst'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_1/U0'
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of [get_ports -scoped_to_current_instance clk]'. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:2]
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'hdmi_out_i/v_vid_in_axi4s_0/inst'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_1/U0'
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of [get_ports -scoped_to_current_instance clk]'. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:2]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:5]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:5]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-CRITICAL WARNING: [Vivado 12-259] No clocks specified, please specify clocks using -clock, -fall_clock, -rise_clock options [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:6]
-CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-to [all_registers -clock [get_clocks -of [get_ports -scoped_to_current_instance clk]]]'. [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:6]
+CRITICAL WARNING: [Vivado 12-259] No clocks specified, please specify clocks using -clock, -fall_clock, -rise_clock options [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-to [all_registers -clock [get_clocks -of [get_ports -scoped_to_current_instance clk]]]'. [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc:6]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_1/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
-Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc] for cell 'hdmi_out_i/axi_mem_intercon/s01_couplers/auto_us_df/inst'
-Finished Parsing XDC File [c:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc] for cell 'hdmi_out_i/axi_mem_intercon/s01_couplers/auto_us_df/inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0_clocks.xdc] for cell 'hdmi_out_i/v_tc_1/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0_clocks.xdc] for cell 'hdmi_out_i/axi_quad_spi_0/U0'
+Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc] for cell 'hdmi_out_i/axi_mem_intercon/s01_couplers/auto_us_df/inst'
+Finished Parsing XDC File [c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.srcs/sources_1/bd/hdmi_out/ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0_clocks.xdc] for cell 'hdmi_out_i/axi_mem_intercon/s01_couplers/auto_us_df/inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
@@ -93,7 +94,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 60 instances
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
 
-link_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1183.461 ; gain = 936.605
+link_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1185.875 ; gain = 938.383
 Command: opt_design -directive RuntimeOptimized
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -105,73 +106,73 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1185.875 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Generate And Synthesize Debug Cores
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/hdl_projects/digilent'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.ipdefs/digilent_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:2.0 for cell dbg_hub_CV.
-INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:2.0", from Vivado IP cache entry "826a13ef2a6bacb7".
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1183.461 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 2736de4cb
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1185.875 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1540021ba
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:31 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:01:20 . Memory (MB): peak = 1185.875 ; gain = 0.000
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
-Implement Debug Cores | Checksum: 1a43fb072
+Implement Debug Cores | Checksum: 1fc81a63e
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 43 inverter(s) to 268 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 109027bd3
+Phase 2 Retarget | Checksum: 1bd9772ff
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:33 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:01:23 . Memory (MB): peak = 1185.875 ; gain = 0.000
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
 INFO: [Opt 31-10] Eliminated 2079 cells.
-Phase 3 Constant propagation | Checksum: 11a7a2f0a
+Phase 3 Constant propagation | Checksum: 131f1e339
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:01:27 . Memory (MB): peak = 1185.875 ; gain = 0.000
 
 Phase 4 Sweep
 INFO: [Opt 31-12] Eliminated 4694 unconnected nets.
 INFO: [Opt 31-11] Eliminated 3703 unconnected cells.
-Phase 4 Sweep | Checksum: 1b677193c
+Phase 4 Sweep | Checksum: 1e725e3d6
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:40 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:01:31 . Memory (MB): peak = 1185.875 ; gain = 0.000
 
 Phase 5 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG hdmi_out_i/processing_system7_0/inst/FCLK_CLK2_BUFG_inst to drive 162 load(s) on clock net hdmi_out_i/processing_system7_0/FCLK_CLK2
 INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
 INFO: [Opt 31-12] Eliminated 0 unconnected nets.
 INFO: [Opt 31-11] Eliminated 0 unconnected cells.
-Phase 5 BUFG optimization | Checksum: 11b37d125
+Phase 5 BUFG optimization | Checksum: 15b6dacff
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:43 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:01:34 . Memory (MB): peak = 1185.875 ; gain = 0.000
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1183.461 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 11b37d125
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1185.875 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 15b6dacff
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:43 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:01:35 . Memory (MB): peak = 1185.875 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-35 Infos, 9 Warnings, 5 Critical Warnings and 0 Errors encountered.
+34 Infos, 9 Warnings, 5 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:44 . Memory (MB): peak = 1183.461 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:21 ; elapsed = 00:01:36 . Memory (MB): peak = 1185.875 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1183.461 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.105 . Memory (MB): peak = 1185.875 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.875 ; gain = 0.000
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper_drc_opted.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper_drc_opted.rpt.
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.875 ; gain = 0.000
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -212,8 +213,8 @@ INFO: [Place 46-5] The placer was invoked with the 'RuntimeOptimized' directive.
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1183.461 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1183.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1185.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1185.875 ; gain = 0.000
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 
@@ -221,72 +222,82 @@ Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 WARNING: [Shape Builder 18-132] Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 153457c26
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 8fe9aef9
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1211.488 ; gain = 28.027
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1204.426 ; gain = 18.551
 
 Phase 1.2 Build Placer Netlist Model
-Phase 1.2 Build Placer Netlist Model | Checksum: d93d4ba2
+Phase 1.2 Build Placer Netlist Model | Checksum: 1638d4576
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: d93d4ba2
+Phase 1.3 Constrain Clocks/Macros | Checksum: 1638d4576
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 1292.332 ; gain = 108.871
-Phase 1 Placer Initialization | Checksum: d93d4ba2
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1284.016 ; gain = 98.141
+Phase 1 Placer Initialization | Checksum: 1638d4576
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 17c03b89c
+Phase 2 Global Placement | Checksum: 1b225e452
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:30 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:34 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 17c03b89c
+Phase 3.1 Commit Multi Column Macros | Checksum: 1b225e452
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:31 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:34 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 13a896c5c
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: bc2df186
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:38 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: ac145e5f
+Phase 3.3 Area Swap Optimization | Checksum: e17d56ea
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:38 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: e4d773fe
+Phase 3.4 Pipeline Register Optimization | Checksum: 153c294cc
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:38 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 150e91cb4
+Phase 3.5 Timing Path Optimizer | Checksum: a49755b3
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:35 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:39 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
-Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 10785ffed
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 143f3ac82
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:43 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:40 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
-Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1aeaef9a5
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 16ccea974
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:49 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
-Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 16feb7106
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 13b51c54e
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1292.332 ; gain = 108.871
-Phase 3 Detail Placement | Checksum: 16feb7106
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:50 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:44 . Memory (MB): peak = 1292.332 ; gain = 108.871
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 54157c87
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:50 . Memory (MB): peak = 1284.016 ; gain = 98.141
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 1d87de09b
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:53 . Memory (MB): peak = 1284.016 ; gain = 98.141
+Phase 3 Detail Placement | Checksum: 1d87de09b
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:54 . Memory (MB): peak = 1284.016 ; gain = 98.141
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -294,48 +305,48 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.508. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 13826107d
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.314. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 103f31b79
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:50 . Memory (MB): peak = 1330.680 ; gain = 147.219
-Phase 4.1 Post Commit Optimization | Checksum: 13826107d
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:05 . Memory (MB): peak = 1321.805 ; gain = 135.930
+Phase 4.1 Post Commit Optimization | Checksum: 103f31b79
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:50 . Memory (MB): peak = 1330.680 ; gain = 147.219
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:05 . Memory (MB): peak = 1321.805 ; gain = 135.930
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 13826107d
+Phase 4.2 Post Placement Cleanup | Checksum: 103f31b79
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:50 . Memory (MB): peak = 1330.680 ; gain = 147.219
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:05 . Memory (MB): peak = 1321.805 ; gain = 135.930
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 13826107d
+Phase 4.3 Placer Reporting | Checksum: 103f31b79
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:50 . Memory (MB): peak = 1330.680 ; gain = 147.219
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:06 . Memory (MB): peak = 1321.805 ; gain = 135.930
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 10f273564
+Phase 4.4 Final Placement Cleanup | Checksum: 135dbfd04
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:51 . Memory (MB): peak = 1330.680 ; gain = 147.219
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 10f273564
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:06 . Memory (MB): peak = 1321.805 ; gain = 135.930
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 135dbfd04
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:51 . Memory (MB): peak = 1330.680 ; gain = 147.219
-Ending Placer Task | Checksum: 42311e6b
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:06 . Memory (MB): peak = 1321.805 ; gain = 135.930
+Ending Placer Task | Checksum: 10e6ecf2d
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:51 . Memory (MB): peak = 1330.680 ; gain = 147.219
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:06 . Memory (MB): peak = 1321.805 ; gain = 135.930
 INFO: [Common 17-83] Releasing license: Implementation
-52 Infos, 36 Warnings, 5 Critical Warnings and 0 Errors encountered.
+51 Infos, 36 Warnings, 5 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:22 ; elapsed = 00:00:55 . Memory (MB): peak = 1330.680 ; gain = 147.219
+place_design: Time (s): cpu = 00:01:38 ; elapsed = 00:01:10 . Memory (MB): peak = 1321.805 ; gain = 135.930
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 1330.680 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1330.680 ; gain = 0.000
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1330.680 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.282 . Memory (MB): peak = 1330.680 ; gain = 0.000
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1330.680 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 1321.805 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1321.805 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1321.805 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.325 . Memory (MB): peak = 1321.805 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 1321.805 ; gain = 0.000
 Command: route_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -348,145 +359,145 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-270] Using Router directive 'RuntimeOptimized'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 2cf411a8 ConstDB: 0 ShapeSum: 153d0cc3 RouteDB: 0
+Checksum: PlaceDB: 38edb035 ConstDB: 0 ShapeSum: d5811ef8 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: d3a2632b
+Phase 1 Build RT Design | Checksum: 1375cf7ca
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:29 . Memory (MB): peak = 1435.844 ; gain = 93.500
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1426.121 ; gain = 91.090
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: d3a2632b
+Phase 2.1 Create Timer | Checksum: 1375cf7ca
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 1435.844 ; gain = 93.500
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:37 . Memory (MB): peak = 1426.121 ; gain = 91.090
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: d3a2632b
+Phase 2.2 Fix Topology Constraints | Checksum: 1375cf7ca
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:30 . Memory (MB): peak = 1435.844 ; gain = 93.500
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:38 . Memory (MB): peak = 1426.121 ; gain = 91.090
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: d3a2632b
+Phase 2.3 Pre Route Cleanup | Checksum: 1375cf7ca
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:30 . Memory (MB): peak = 1435.844 ; gain = 93.500
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:38 . Memory (MB): peak = 1426.121 ; gain = 91.090
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 20cbbc367
+Phase 2.4 Update Timing | Checksum: 1cc8e3ad3
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1461.582 ; gain = 119.238
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.465  | TNS=0.000  | WHS=-0.357 | THS=-410.921|
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:46 . Memory (MB): peak = 1451.098 ; gain = 116.066
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.171 | TNS=-156.715| WHS=-0.346 | THS=-408.743|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 28a1afe1d
+Phase 2.5.1 Update Timing | Checksum: 1f82fcc15
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:41 . Memory (MB): peak = 1464.359 ; gain = 122.016
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.465  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:50 . Memory (MB): peak = 1453.422 ; gain = 118.391
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.171 | TNS=-102.335| WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 1fe09ae80
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1d9bdeeb2
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:41 . Memory (MB): peak = 1464.359 ; gain = 122.016
-Phase 2 Router Initialization | Checksum: 1f15fd05c
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:51 . Memory (MB): peak = 1453.422 ; gain = 118.391
+Phase 2 Router Initialization | Checksum: 245a11ac2
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:41 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:51 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1637ffb75
+Phase 3 Initial Routing | Checksum: 10958827b
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:43 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:53 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1342
- Number of Nodes with overlaps = 107
- Number of Nodes with overlaps = 12
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1479
+ Number of Nodes with overlaps = 104
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 2a4c31379
+Phase 4.1.1 Update Timing | Checksum: 1677a575c
 
-Time (s): cpu = 00:01:12 ; elapsed = 00:00:50 . Memory (MB): peak = 1464.359 ; gain = 122.016
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.095  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:01 . Memory (MB): peak = 1453.422 ; gain = 118.391
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.244 | TNS=-205.365| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: eb555e99
+Phase 4.1 Global Iteration 0 | Checksum: 1a3d154d6
 
-Time (s): cpu = 00:01:12 ; elapsed = 00:00:51 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:01 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: bf2f7b42
+Phase 4.2.1 Update Timing | Checksum: 1aafb5037
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:51 . Memory (MB): peak = 1464.359 ; gain = 122.016
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.095  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:02 . Memory (MB): peak = 1453.422 ; gain = 118.391
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.244 | TNS=-205.365| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 19b7a419a
+Phase 4.2 Global Iteration 1 | Checksum: 10c8f9112
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:51 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:02 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 4.3 Global Iteration 2
  Number of Nodes with overlaps = 0
 
 Phase 4.3.1 Update Timing
-Phase 4.3.1 Update Timing | Checksum: 11ca628b0
+Phase 4.3.1 Update Timing | Checksum: 24dcf5a4b
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.359 ; gain = 122.016
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.095  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:03 . Memory (MB): peak = 1453.422 ; gain = 118.391
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.244 | TNS=-205.365| WHS=N/A    | THS=N/A    |
 
-Phase 4.3 Global Iteration 2 | Checksum: 1712ae4e0
+Phase 4.3 Global Iteration 2 | Checksum: 18eb7550d
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.359 ; gain = 122.016
-Phase 4 Rip-up And Reroute | Checksum: 1712ae4e0
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:03 . Memory (MB): peak = 1453.422 ; gain = 118.391
+Phase 4 Rip-up And Reroute | Checksum: 18eb7550d
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:03 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 1712ae4e0
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1aaa174d1
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:04 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1712ae4e0
+Phase 5.2 Clock Skew Optimization | Checksum: 1aaa174d1
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.359 ; gain = 122.016
-Phase 5 Delay and Skew Optimization | Checksum: 1712ae4e0
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:04 . Memory (MB): peak = 1453.422 ; gain = 118.391
+Phase 5 Delay and Skew Optimization | Checksum: 1aaa174d1
 
-Time (s): cpu = 00:01:14 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:04 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 207bffc5c
+Phase 6.1.1 Update Timing | Checksum: 17c8af5f3
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:00:53 . Memory (MB): peak = 1464.359 ; gain = 122.016
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.243  | TNS=0.000  | WHS=0.024  | THS=0.000  |
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:05 . Memory (MB): peak = 1453.422 ; gain = 118.391
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.157 | TNS=-139.709| WHS=0.025  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 19d808ebe
+Phase 6.1 Hold Fix Iter | Checksum: 1c12fdda7
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:00:53 . Memory (MB): peak = 1464.359 ; gain = 122.016
-Phase 6 Post Hold Fix | Checksum: 19d808ebe
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:05 . Memory (MB): peak = 1453.422 ; gain = 118.391
+Phase 6 Post Hold Fix | Checksum: 1c12fdda7
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:00:53 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:05 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.40862 %
-  Global Horizontal Routing Utilization  = 4.13193 %
+  Global Vertical Routing Utilization    = 3.16242 %
+  Global Horizontal Routing Utilization  = 4.14917 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -495,56 +506,63 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 19d808ebe
+Congestion Report
+North Dir 1x1 Area, Max Cong = 46.8468%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 59.4595%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 58.8235%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 1ab83f090
 
-Time (s): cpu = 00:01:17 ; elapsed = 00:00:54 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:05 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 19d808ebe
+Phase 8 Verifying routed nets | Checksum: 1ab83f090
 
-Time (s): cpu = 00:01:17 ; elapsed = 00:00:54 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:06 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 213ebf8ad
+Phase 9 Depositing Routes | Checksum: 1d2935b07
 
-Time (s): cpu = 00:01:18 ; elapsed = 00:00:55 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:34 ; elapsed = 00:01:07 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.243  | TNS=0.000  | WHS=0.024  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.157 | TNS=-139.709| WHS=0.025  | THS=0.000  |
 
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 213ebf8ad
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1d2935b07
 
-Time (s): cpu = 00:01:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:08 . Memory (MB): peak = 1453.422 ; gain = 118.391
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:20 ; elapsed = 00:00:56 . Memory (MB): peak = 1464.359 ; gain = 122.016
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:09 . Memory (MB): peak = 1453.422 ; gain = 118.391
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-69 Infos, 36 Warnings, 5 Critical Warnings and 0 Errors encountered.
+67 Infos, 37 Warnings, 5 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:01 . Memory (MB): peak = 1464.359 ; gain = 133.680
+route_design: Time (s): cpu = 00:01:44 ; elapsed = 00:01:14 . Memory (MB): peak = 1453.422 ; gain = 131.617
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 1464.359 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1464.359 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 1453.422 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 1453.422 ; gain = 0.000
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper_drc_routed.rpt.
-report_drc: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1509.637 ; gain = 45.277
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1490.063 ; gain = 36.641
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/impl_1/hdmi_out_wrapper_methodology_drc_routed.rpt.
-report_methodology: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1560.113 ; gain = 50.477
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/hdmi_out_wrapper_methodology_drc_routed.rpt.
+report_methodology: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1551.281 ; gain = 61.219
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
 Command: report_power -file hdmi_out_wrapper_power_routed.rpt -pb hdmi_out_wrapper_power_summary_routed.pb -rpx hdmi_out_wrapper_power_routed.rpx
 Running Vector-less Activity Propagation...
@@ -552,8 +570,9 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-79 Infos, 38 Warnings, 5 Critical Warnings and 0 Errors encountered.
+77 Infos, 39 Warnings, 6 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1629.297 ; gain = 72.781
 Command: write_bitstream -force -no_partial_bitfile hdmi_out_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -582,7 +601,7 @@ WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The
 WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 hdmi_out_i/v_axi4s_vid_out_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has an input control pin hdmi_out_i/v_axi4s_vid_out_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[9] (net: hdmi_out_i/v_axi4s_vid_out_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmgb.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ADDRA[6]) which is driven by a register (hdmi_out_i/v_axi4s_vid_out_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB) which is driven by a register (hdmi_out_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 WARNING: [DRC 23-20] Rule violation (REQP-1840) RAMB18 async control check - The RAMB18E1 hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB) which is driven by a register (hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC 23-20] Rule violation (RTSTAT-10) No routable loads - 157 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/RUNTEST, dbg_hub/inst/TCK, dbg_hub/inst/TMS, dbg_hub/inst/UPDATE_temp_i, hdmi_out_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/v_axi4s_vid_out_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/s01_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i (the first 15 of 134 listed).
+WARNING: [DRC 23-20] Rule violation (RTSTAT-10) No routable loads - 157 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/RUNTEST, dbg_hub/inst/TCK, dbg_hub/inst/TMS, dbg_hub/inst/UPDATE_temp_i, hdmi_out_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v2_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/v_vid_in_axi4s_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/FAMILY_SUPPORTED.I_SYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, hdmi_out_i/v_axi4s_vid_out_0/inst/COUPLER_INST/FIFO_INST/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i (the first 15 of 134 listed).
 INFO: [DRC 23-20] Rule violation (REQP-181) writefirst - Synchronous clocking is detected for BRAM (hdmi_out_i/axi_mem_intercon/s01_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 24 Warnings, 1 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
@@ -595,8 +614,9 @@ Creating bitstream...
 Writing bitstream ./hdmi_out_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] 'C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Feb 10 14:35:33 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-87 Infos, 62 Warnings, 5 Critical Warnings and 0 Errors encountered.
+86 Infos, 63 Warnings, 6 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2024.492 ; gain = 387.949
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 22 21:07:48 2017...
+write_bitstream: Time (s): cpu = 00:00:45 ; elapsed = 00:00:44 . Memory (MB): peak = 2019.238 ; gain = 389.941
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 10 14:35:34 2018...

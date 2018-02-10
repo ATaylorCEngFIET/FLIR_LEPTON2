@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Webtalk v2016.4 (64-bit)
+# Webtalk v2016.4_AR70065 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # 
-# Start of session at: Wed Jun 21 22:09:05 2017
-# Process ID: 5224
-# Current directory: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/webtalk
+# Start of session at: Sat Feb 10 15:03:41 2018
+# Process ID: 4688
+# Current directory: C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/webtalk/webtalk.log
-# Journal file: C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/hdl_projects/Z7-20/hdmi_out/proj/hdmi_out.runs/synth_1'
+HD_PWD='C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

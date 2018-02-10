@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2016.4 (64-bit)              -->
+<!-- Product Version: Vivado v2016.4_AR70065 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3928-DESKTOP-HQKVQ13/PrjAr/_X_/hdmi_out.xpr">
+<Project Version="7" Minor="17" Path="C:/Users/aptay/Documents/GitHub/FLIR_LEPTON2/hdmi_out/hdmi_out.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9d2583e8cc104e0aa4e286446cc6add9"/>
@@ -63,6 +63,40 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_m00_regslice_0/hdmi_out_m00_regslice_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_s01_regslice_0/hdmi_out_s01_regslice_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_s00_data_fifo_0/hdmi_out_s00_data_fifo_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_s00_regslice_0/hdmi_out_s00_regslice_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_v_vid_in_axi4s_0_0/hdmi_out_v_vid_in_axi4s_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_dvi2rgb_0_0/hdmi_out_dvi2rgb_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_rgb2dvi_0_0/hdmi_out_rgb2dvi_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_xlconcat_0_0/hdmi_out_xlconcat_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_v_tc_0_0/hdmi_out_v_tc_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_v_axi4s_vid_out_0_0/hdmi_out_v_axi4s_vid_out_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_xlconstant_1_0/hdmi_out_xlconstant_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_ila_0_0/hdmi_out_ila_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_axi_quad_spi_0_0/hdmi_out_axi_quad_spi_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_xbar_1/hdmi_out_xbar_1.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_v_tc_1_0/hdmi_out_v_tc_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="hdl/hdmi_out.vhd"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_axis_subset_converter_0_0/hdmi_out_axis_subset_converter_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_xbar_0/hdmi_out_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_ps7_0_axi_periph_0/hdmi_out_ps7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_processing_system7_0_0/hdmi_out_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_proc_sys_reset_1_0/hdmi_out_proc_sys_reset_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_proc_sys_reset_0_0/hdmi_out_proc_sys_reset_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_axi_vdma_0_0/hdmi_out_axi_vdma_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_axi_mem_intercon_0/hdmi_out_axi_mem_intercon_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_axi_gpio_hdmi_0/hdmi_out_axi_gpio_hdmi_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_axi_dynclk_0_0/hdmi_out_axi_dynclk_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_auto_pc_0/hdmi_out_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_m00_data_fifo_0/hdmi_out_m00_data_fifo_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_auto_us_df_0/hdmi_out_auto_us_df_0.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="ip/hdmi_out_auto_pc_1/hdmi_out_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="hdmi_out_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="hdl/hdmi_out.hwdef"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="hw_handoff/hdmi_out_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="hdmi_out.bd" FileRelPathName="hw_handoff/hdmi_out.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/hdmi_out/hdl/hdmi_out_wrapper.vhd">
         <FileInfo>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1498160851">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1518271790">
+  <File Type="PWROPT-DRC" Name="hdmi_out_wrapper_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hdmi_out_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hdmi_out_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="hdmi_out_wrapper_power_routed.rpx"/>
   <File Type="PA-TCL" Name="hdmi_out_wrapper.tcl"/>
-  <File Type="INIT-TIMING" Name="hdmi_out_wrapper_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="hdmi_out_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="hdmi_out_wrapper_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hdmi_out_wrapper.hwdef"/>
   <File Type="RDI-RDI" Name="hdmi_out_wrapper.vdi"/>
   <File Type="OPT-DCP" Name="hdmi_out_wrapper_opt.dcp"/>
-  <File Type="OPT-HWDEF" Name="hdmi_out_wrapper.hwdef"/>
   <File Type="OPT-DRC" Name="hdmi_out_wrapper_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="hdmi_out_wrapper_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="hdmi_out_wrapper_pwropt.dcp"/>
@@ -31,14 +31,14 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_out_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="hdmi_out_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="hdmi_out_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="hdmi_out_wrapper_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="hdmi_out_wrapper.bin"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_out_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_out_wrapper_drc_routed.rpx"/>
   <File Type="BG-DRC" Name="hdmi_out_wrapper.drc"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_out_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_out_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MSK" Name="hdmi_out_wrapper.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_out_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_out_wrapper_methodology_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="hdmi_out_wrapper.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_out_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="hdmi_out_wrapper_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="hdmi_out_wrapper_power_summary_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="hdmi_out_wrapper_route_status.rpt"/>
@@ -79,6 +79,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/archive_project_summary.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="hdmi_out_wrapper"/>
